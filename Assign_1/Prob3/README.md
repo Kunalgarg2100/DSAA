@@ -8,7 +8,7 @@ We have **N** square filters each of size **F**. Let the size of the image be **
 convolution is done with a step size of **S** units, and the input is also padded with a zero padding
 of **Z.**
 
-The size of image after zero padding will be **$W + 2Z, H + 2Z, Channels$**.
+The size of image after zero padding will be **\[W + 2Z, H + 2Z, Channels\]**.
 
 Now the filter with step length S units applied. Hence the output size will be
 $$
@@ -28,4 +28,4 @@ For N such convulations:
 
 - Number of additions after N covulations will be $\sum_{i=0}^{n-1} (W_i * H_i) * (F^2-1) * channels$ 
 - Number of mutiplications after N covulations will be $\sum_{i=0}^{ n-1}  (W_i * H_i) * F^2 * channels$
-- Total operations will be $\sum_{i=0}^{n-1} (W_i * H_i) * (2F^2-1) * channels$ 
+- Total operations will be $ \sum_{i=0}^{n-1} (W_i * H_i) * (2F^2-1) * channels $ 
